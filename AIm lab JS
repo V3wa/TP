@@ -1,0 +1,31 @@
+let posx=200;
+let posy=200;
+let tam=100;
+let pont=0;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  fill('black')
+  textSize(25);
+  text(pont, 10, 380,);
+  fill('red');
+  circle(posx, posy, tam);
+}
+
+function mousePressed() {
+  let mouse = dist(mouseX, mouseY, posx, posy)
+  if (mouse < tam / 2) {
+    ponto();
+  }
+}
+
+function ponto() {
+  pont=pont+1;
+  tam=tam-2,5;
+  posx=random(0,400);
+  posy=random(0,400);
+}
